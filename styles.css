@@ -1,0 +1,37 @@
+body {
+    font-family: 'Arial', sans-serif; /* You can replace this with a more modern font if you have one in mind */
+    background-color: #2d2d2d; /* Dark grey background */
+    color: #ffffff; /* White text color */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+footer {
+    padding: 20px;
+    font-size: 14px;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.socials a {
+    text-decoration: none;
+    color: #ffffff;
+    margin: 0 10px;
+}
+
+.socials img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
