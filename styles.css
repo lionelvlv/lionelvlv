@@ -31,7 +31,8 @@ footer {
 }
 
 .socials img {
-    width: 24px;
+    width: auto;
     height: 24px;
     vertical-align: middle;
 }
+
