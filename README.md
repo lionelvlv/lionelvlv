@@ -2,14 +2,6 @@
 
 I'm a Computer Science student at UC Berkeley, passionate about data science, game development, and creating innovative software solutions. Welcome to my GitHub profile!
 
-## 🎓 Education
-
-- **University of California Berkeley**  
-  Expected Graduation: Spring 2026  
-  Computer Science, CS Scholar, Fiat Lux Scholar, Honor Student  
-  GPA: 3.9  
-  Relevant Courses: The Foundations of Data Science, Structure and Interpretation of Computer Programs, Data Structures
-
 ## 💻 Technical Skills
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
