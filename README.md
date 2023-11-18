@@ -2,6 +2,14 @@
 
 I'm a Computer Science student at UC Berkeley, passionate about data science, software engineering, and game development! I'm always looking for learning opportunities such as research and internships.
 
+As of November 2023 I am:
+- Working towards declaring the CS Major at UC Berkeley (3.3 GPA Requirement yikes)
+- Studying Data Structures
+- Working on a 2D tile game which I will release on itch.io
+- Academic Interning and helping facilitate lab sections in Data 8: Foundations of Data Science
+- Working on a cool frog website for my biology capstone project
+- Watching Jujutsu Kaisen Season 2
+
 ## 💻 Technical Skills
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
