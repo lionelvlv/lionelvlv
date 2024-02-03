@@ -263,3 +263,50 @@ ul {
         gap: 10px;
     }
 }
+
+#blog {
+    margin: 40px auto;
+    max-width: 800px; /* Keeps the content readable */
+}
+footer h2{
+    text-align: center;
+    color: #4caf50;
+}
+#blog h2 {
+    color: #4caf50; /* Matches the site's theme */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#blog {
+    margin: 40px auto;
+    max-width: 800px; /* Adjust as necessary */
+}
+
+#blog .post-image {
+    text-align: center; /* Center the image if it's smaller than the max width */
+    margin-bottom: 20px; /* Space between the image and the title */
+}
+
+#blog .post-image img {
+    width: 100%; /* Make the image responsive */
+    max-width: 600px; /* Maximum size of the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: adds rounded corners */
+    display: block; /* Ensures the image is block level */
+    margin: 0 auto; /* Center the image within the figure */
+}
+
+#blog .text-content {
+    background-color: #363636; /* For contrast */
+    padding: 20px;
+    border-radius: 5px; /* Consistency with the image's border-radius */
+}
+
+#blog .text-content h3, #blog .text-content p {
+    color: #ffffff; /* Ensure text is visible on dark background */
+}
+
+
+
+
