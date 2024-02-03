@@ -2,12 +2,21 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #2d2d2d; /* Dark grey background */
     color: #ffffff; /* White text color */
-    text-align: center;
     margin: 0;
     padding: 0;
 }
 
-header {
+.container {
+    margin: 0 auto; /* Centers the container */
+    max-width: 1200px; 
+    padding: 0 40px; /* Large margins on the left and right */
+}
+
+header, footer, .socials, nav {
+    text-align: center; /* Center align the text for these elements */
+}
+
+.header-name {
     padding: 20px;
     font-size: 24px;
     font-weight: bold;
@@ -27,7 +36,6 @@ footer {
 .socials a {
     text-decoration: none;
     color: #ffffff;
-    margin: 0 10px;
 }
 
 .socials img {
@@ -36,3 +44,79 @@ footer {
     vertical-align: middle;
 }
 
+nav {
+    font-size: medium;
+}
+
+.progress-container {
+    width: 100%;
+    height: 4px;
+    background: #ccc;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+}
+  
+.progress-bar {
+    height: 4px;
+    background: #4caf50;
+    width: 0%;
+}
+
+/* Projects Gallery */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Distributes space evenly */
+    gap: 20px; /* Space between projects */
+}
+
+.project {
+    width: 30%; /* Adjust based on preference and screen size */
+    text-align: center;
+}
+
+.project img {
+    width: 100%; /* Continue to take full width of its container */
+    height: 200px; /* Fixed height for all images */
+    object-fit: cover; /* Cover the area, might crop the image */
+    border-radius: 10px; /* Keeps rounded edges */
+    margin-bottom: 0px; /* Space between the image and the text */
+    transition: transform 0.3s ease; /* Smooth transition for transform changes */
+}
+
+.project img:hover {
+    opacity: 0.8; /* Slightly transparent on hover */
+    transform: scale(1.05) ; /* Slightly bigger on hover */
+}
+
+.project h3 a {
+    color: #ffffff; /* Initial color */
+    text-decoration: none; /* Removes underline */
+    display: block; /* Makes the link fill the container for easier clicking */
+}
+
+.project h3 a:hover {
+    color: #4caf50; /* Change color on hover */
+}
+
+/* Stylish Hover Effect for Header */
+header h1 a, header p {
+    transition: font-size 0.3s ease; /* Smooth transition for font size */
+}
+
+header h1 a:hover {
+    font-size: 26px; /* Make text bigger on hover */
+    color: #4caf50; /* Optional: Change color to indicate clickable */
+}
+
+footer a:hover {
+    color: #4caf50; /* Change color on hover */
+}
+
+header a{
+    text-decoration: none;
+    color: #4caf50;}
+#name:hover{
+    color: #4caf50;
+}

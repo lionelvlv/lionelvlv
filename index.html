@@ -6,36 +6,90 @@
     <title>Lionel V</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://static-00.iconduck.com/assets.00/disguised-face-emoji-512x512-ikk65cyd.png">
 </head>
+<!--
+    TODOLIST
+    1. include video projects to demonstrate Premiere Pro (vlogging)
+    2. include Proj3 and make game trailer
+    3. get professional photo
+    REFERENCES: 
+        - https://www.ocf.berkeley.edu/~lqi/
+    -->
 <body>
-    <header>
-        <h3> Lionel V </h3>
-        <nav>
-            <a href=#>About</a>
-            <a href=#>Projects</a>
-            <a href="https://docs.google.com/document/d/1bImyCKyUUq8iKtp3EOvbM_VaLC2QK5-INj78YshLenI/edit?usp=sharing/" target="_blank">
-                Resume
-            </a>
-            <a href=#>Contact</a>
-          </nav>
-    </header>
-
-    <div>
-        <img src="https://media.tenor.com/flX5arjPeDcAAAAC/sora-cooking.gif" alt="Cooking GIF">
-        <p>hard at work cooking here. come back later!</p>
-    </div>
-
-    <footer>
-        <h3> lionel.verano.iv@berkeley.edu </h3>
-        <div class="socials">
-            <a href="https://github.com/lionelvlv" target="_blank">
-                <img src="github.png" alt="GitHub Logo"> GitHub
-            </a>
-            <a href="https://www.youtube.com/channel/UCloRg8W9DTKguzMLWoG8jAg" target="_blank">
-                <img src="youtube.png" alt="YouTube Logo"> YouTube
-            </a>
-            
+        <!-- Progress Bar Container -->
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
         </div>
-    </footer>
+    <div class ="container">
+        <header>
+            <h1 id="name"> <b>Hi I'm Lionel. (´◡`)</b> </h1>
+            <p>I'm an aspiring developer studying Computer Science at UC Berkeley.</p>
+            <p>This semester, I'm taking <a href="https://www.eecs70.org/">Discrete Mathmatics and Probability and Statistics.</a></p>
+            <p>I hope you like my stuff.</p>
+            <!-- <img id="headerImage" src="path/to/your/header-image.jpg" alt="Lionel"> -->
+        </header>
+        <main>
+        
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-container">
+                <!-- Project 1: Build Your Own World -->
+                <div class="project">
+                    <a href="https://youtu.be/LYvN_5UWJVY">
+                        <img src="assets/projects/boyw.png" alt="Build Your Own World Project Screenshot">
+                    </a>
+                    <h3><a href="https://youtu.be/LYvN_5UWJVY">Build Your Own World Project (2023)</a></h3>
+                    <p>Made a game in Java, implementing the A* pathfinding algorithm, map generation, and more. Code available upon request.</p>
+                </div>
+        
+                <!-- Project 2: Lethal Company Fast Climbing Mod -->
+                <div class="project">
+                    <a href="https://thunderstore.io/c/lethal-company/p/lv/FastClimbMod/">
+                        <img src="assets/projects/lethal.png" alt="Lethal Company Fast Climbing Mod Screenshot">
+                    </a>
+                    <h3><a href="https://thunderstore.io/c/lethal-company/p/lv/FastClimbMod/">Lethal Company Mod (2023)</a></h3>
+                    <p>Modified existing codebase and created patches that improve player mobility by 150%.</p>
+                </div>
+        
+                <!-- Project 3: NGordnet -->
+                <div class="project">
+                        <img src="assets/projects/ngrodnet.png" alt="NGordnet Screenshot">
+                    <h3>NGordnet (2023)</h3>
+                    <p>Engineered a Java-based web tool for processing large datasets from WordNet and Google Ngram handling expansive data volumes efficiently. Code available upon request.</p>
+                </div>
+
+                <!-- Project 4: Pigmental -->
+                <div class="project">
+                    <a href="https://fylthy-cazual.itch.io/pigmental-v0">
+                        <img src="assets/projects/pigmental.png" alt="Pigmental">
+                    </a>
+                    <h3><a href="https://fylthy-cazual.itch.io/pigmental-v0">Pigmental (2022)</a></h3>
+                    <p>Made a game in Unity in Berkeley's Game Design and Development Club.</p>
+                </div>
+            </div>
+        </section>
+        
+        
+            
+        <footer>
+            <h3><a href=""> lionel.verano.iv@berkeley.edu </a></a></h3>
+            <div class="socials">
+                <a href="https://github.com/lionelvlv" target="_blank">
+                    <img src="assets/logo/github.png" alt="GitHub Logo"> GitHub </a>
+                    <a href="https://www.linkedin.com/in/lionelv2003/" target="_blank">
+                        <img src="assets/logo/linkedin.png" alt="LinkedIn Logo"> LinkedIn </a>
+            </div>
+            <!-- <nav>
+                <a href=#>About</a>
+                <a href=#>Projects</a>
+                <a href="https://docs.google.com/document/d/1bImyCKyUUq8iKtp3EOvbM_VaLC2QK5-INj78YshLenI/edit?usp=sharing/" target="_blank">
+                    Resume
+                </a>
+                <a href=#>Contact</a>
+            </nav> -->
+        </footer>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
