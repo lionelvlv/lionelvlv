@@ -206,3 +206,60 @@ header a{
     opacity: 0.8;
     color: lightgreen; /* Grey for comments */
 }
+
+/* Basic Reset for List */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling Sidebar */
+.sidebar {
+    display: flex;
+    align-items: center;
+    background-color: #2d2d2d; /* Slightly lighter than body for contrast */
+    padding: 10px 20px; /* Adjust based on your layout */
+}
+
+.sidebar nav ul {
+    display: flex;
+    gap: 30px; /* Space between menu items */
+}
+
+.sidebar nav a {
+    text-decoration: none;
+    color: #fff; /* White text for contrast */
+    font-weight: 500;
+    position: relative; /* Required for the after pseudo-element */
+    transition: all 0.3s ease; /* Smooth transition for effects */
+}
+
+/* Hover effect for sidebar elements */
+.sidebar nav a:hover {
+    color: #4caf50; /* Highlight color on hover */
+}
+
+.sidebar nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px; /* Position under the text */
+    left: 50%;
+    background-color: #4caf50; /* Color of the underline */
+    transition: width 0.3s ease, left 0.3s ease; /* Transition for the effect */
+}
+
+.sidebar nav a:hover::after {
+    width: 100%; /* Full width on hover */
+    left: 0; /* Align to the left */
+}
+
+/* Responsive Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .sidebar nav ul {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        gap: 10px;
+    }
+}
