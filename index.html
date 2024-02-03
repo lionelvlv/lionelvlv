@@ -23,13 +23,35 @@
         </div>
     <div class ="container">
         <header>
+            <h1 id="name">
+                <b><span id="typed-text"></span><span class="cursor"></span></b>
+            </h1>
             <h1 id="name"> <b>Hi I'm Lionel. (´◡`)</b> </h1>
             <p>I'm an aspiring developer studying Computer Science at UC Berkeley.</p>
             <p>This semester, I'm taking <a href="https://www.eecs70.org/">Discrete Mathmatics and Probability and Statistics.</a></p>
             <p>I hope you like my stuff.</p>
             <!-- <img id="headerImage" src="path/to/your/header-image.jpg" alt="Lionel"> -->
         </header>
-        <main>
+        
+        <div class="terminal">
+            <p class="prompt">> Lionel.<span class="method">info</span></p>
+            <p><span class="brackets">[</span>"lionel.verano.iv@berkeley.edu", <a href="https://www.linkedin.com/in/lionelv2003/">"LinkedIn"</a>, <a href="https://github.com/lionelvlv">"github"</a><span class="brackets">]</span></p>
+            
+            <p class="prompt">> Lionel.<span class="method">education</span></p>
+            <p>Computer Science Major at University of California Berkeley</p>
+        
+            <p class="prompt">> Lionel.<span class="method">resume</span></p>
+            <p><a href="https://docs.google.com/document/d/1bImyCKyUUq8iKtp3EOvbM_VaLC2QK5-INj78YshLenI/edit?usp=sharing">lionel.pdf</a></p>
+        
+            <p class="prompt">> Lionel.<span class ="method">interests</span></p>
+            <p><span class="brackets">[</span>"Game Development", "Data Science", "Machine Learning", "Web Development"<span class="brackets">]</span></p>
+        
+            <p class="prompt">> Lionel.<span class ="method">skills</span></p>
+            <p><span class="brackets">[</span>"Java", "Python", "C#", "HTML/CSS", "JavaScript", "SQL", "Git", "Unity", "Premiere Pro"<span class="brackets">]</span></p>
+        
+            <p class="prompt">><span class="cursor"></span></p> <!-- The blinking cursor -->
+        </div>
+        
         
         <section id="projects">
             <h2>Projects</h2>
@@ -40,6 +62,7 @@
                         <img src="assets/projects/boyw.png" alt="Build Your Own World Project Screenshot">
                     </a>
                     <h3><a href="https://youtu.be/LYvN_5UWJVY">Build Your Own World Project (2023)</a></h3>
+                    <p class="project-languages"> <span>[Java]</span> <span>[A* Pathfinding]</span> <span>[Map Generation]</span></p>
                     <p>Made a game in Java, implementing the A* pathfinding algorithm, map generation, and more. Code available upon request.</p>
                 </div>
         
@@ -48,6 +71,7 @@
                     <a href="https://thunderstore.io/c/lethal-company/p/lv/FastClimbMod/">
                         <img src="assets/projects/lethal.png" alt="Lethal Company Fast Climbing Mod Screenshot">
                     </a>
+                    <p class="project-languages"><span>[C#]</span> <span>[Game Patch]</span></p>
                     <h3><a href="https://thunderstore.io/c/lethal-company/p/lv/FastClimbMod/">Lethal Company Mod (2023)</a></h3>
                     <p>Modified existing codebase and created patches that improve player mobility by 150%.</p>
                 </div>
@@ -56,6 +80,7 @@
                 <div class="project">
                         <img src="assets/projects/ngrodnet.png" alt="NGordnet Screenshot">
                     <h3>NGordnet (2023)</h3>
+                    <p class="project-languages"><span>[Java]</span> <span>[Data Visualization]</span></p>
                     <p>Engineered a Java-based web tool for processing large datasets from WordNet and Google Ngram handling expansive data volumes efficiently. Code available upon request.</p>
                 </div>
 
@@ -65,6 +90,7 @@
                         <img src="assets/projects/pigmental.png" alt="Pigmental">
                     </a>
                     <h3><a href="https://fylthy-cazual.itch.io/pigmental-v0">Pigmental (2022)</a></h3>
+                    <p class="project-languages"><span>[C#]</span> <span>[Game Dev]</span> <span>[Unity]</span> <span>[UI Design]</span></p>
                     <p>Made a game in Unity in Berkeley's Game Design and Development Club.</p>
                 </div>
             </div>
@@ -77,17 +103,8 @@
             <div class="socials">
                 <a href="https://github.com/lionelvlv" target="_blank">
                     <img src="assets/logo/github.png" alt="GitHub Logo"> GitHub </a>
-                    <a href="https://www.linkedin.com/in/lionelv2003/" target="_blank">
-                        <img src="assets/logo/linkedin.png" alt="LinkedIn Logo"> LinkedIn </a>
-            </div>
-            <!-- <nav>
-                <a href=#>About</a>
-                <a href=#>Projects</a>
-                <a href="https://docs.google.com/document/d/1bImyCKyUUq8iKtp3EOvbM_VaLC2QK5-INj78YshLenI/edit?usp=sharing/" target="_blank">
-                    Resume
-                </a>
-                <a href=#>Contact</a>
-            </nav> -->
+                <a href="https://www.linkedin.com/in/lionelv2003/" target="_blank">
+                    <img src="assets/logo/linkedin.png" alt="LinkedIn Logo"> LinkedIn </a>            </div>
         </footer>
     </div>
     <script src="script.js"></script>

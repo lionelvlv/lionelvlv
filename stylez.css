@@ -70,9 +70,13 @@ nav {
     justify-content: space-around; /* Distributes space evenly */
     gap: 20px; /* Space between projects */
 }
-
+#projects h2{
+    margin-top: 100px;
+    text-align: center;
+    color: #4caf50;
+}
 .project {
-    width: 30%; /* Adjust based on preference and screen size */
+    width: 50%; /* Adjust based on preference and screen size */
     text-align: center;
 }
 
@@ -100,6 +104,20 @@ nav {
     color: #4caf50; /* Change color on hover */
 }
 
+.project-languages {
+    margin-bottom: 10px; /* Spacing between this text and the project description */
+}
+
+.project-languages span {
+    background-color: #555; /* Dark background for the chips */
+    color: #fff; /* White text color */
+    border-radius: 4px; /* Rounded edges for the chips */
+    padding: 2px 8px; /* Padding inside the chips */
+    margin: 0 4px; /* Margin between chips */
+    display: inline-block; /* Display as inline-block for proper alignment */
+    font-size: 0.8em; /* Smaller font size for the chips */
+}
+
 /* Stylish Hover Effect for Header */
 header h1 a, header p {
     transition: font-size 0.3s ease; /* Smooth transition for font size */
@@ -119,4 +137,72 @@ header a{
     color: #4caf50;}
 #name:hover{
     color: #4caf50;
+}
+
+/* Styling for the overall terminal */
+.terminal {
+    background-color: #1e1e1e; /* Darker background for contrast */
+    color: #ccc; /* Light grey text for better readability */
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+    margin: 20px auto; /* Centering the terminal */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adding depth */
+    position: relative; /* Needed for positioning the pseudo-elements */
+    overflow: hidden; /* Keeps the pseudo-elements within the border radius */
+}
+
+/* Terminal top bar */
+.terminal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 20px; /* Height of the top bar */
+    background-color: #555; /* Dark grey top bar */
+}
+
+
+
+/* Terminal Cursor Styling */
+.terminal .cursor {
+    display: inline-block;
+    vertical-align: middle; /* Adjusts alignment with the text */
+    width: 2px; /* Width of the cursor */
+    height: 1em; /* Height to match the text */
+    background-color: #0f0; /* Cursor color, bright green for visibility */
+    margin-left: 4px; /* Space between the cursor and the preceding text */
+    animation: cursor-blink 1s infinite step-start;
+}
+
+/* Keyframes for the cursor blink animation */
+@keyframes cursor-blink {
+    from, to { background-color: transparent; }
+    50% { background-color: #0f0; }
+}
+
+/* Color styling for terminal responses */
+.terminal p:not([class*="prompt"]) {
+    color: #006400; /* Dark green for regular text responses */
+}
+
+/* Color styling for brackets and methods */
+.terminal span.brackets {
+    color: #800080; /* Purple for brackets */
+}
+
+.terminal span.method {
+    color: #8FBC8F; /* Light green for methods */
+}
+
+.terminal a {
+    text-decoration: none;
+    color: lightgreen; /* Grey for comments */
+}
+
+.terminal a:hover {
+    text-decoration: none;
+    opacity: 0.8;
+    color: lightgreen; /* Grey for comments */
 }
