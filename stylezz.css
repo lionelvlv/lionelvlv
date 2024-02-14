@@ -22,6 +22,16 @@ header, footer, .socials, nav {
     font-weight: bold;
 }
 
+#name::before {  
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+  
+#name:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
 footer {
     padding: 20px;
     font-size: 14px;
@@ -118,16 +128,6 @@ nav {
     font-size: 0.8em; /* Smaller font size for the chips */
 }
 
-/* Stylish Hover Effect for Header */
-header h1 a, header p {
-    transition: font-size 0.3s ease; /* Smooth transition for font size */
-}
-
-header h1 a:hover {
-    font-size: 26px; /* Make text bigger on hover */
-    color: #4caf50; /* Optional: Change color to indicate clickable */
-}
-
 footer a:hover {
     color: #4caf50; /* Change color on hover */
 }
@@ -135,9 +135,6 @@ footer a:hover {
 header a{
     text-decoration: none;
     color: #4caf50;}
-#name:hover{
-    color: #4caf50;
-}
 
 /* Styling for the overall terminal */
 .terminal {
