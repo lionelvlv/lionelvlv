@@ -132,7 +132,8 @@ footer a:hover {
     color: #4caf50; /* Change color on hover */
 }
 
-header a{
+#header{
+    text-align: center;
     text-decoration: none;
     color: #4caf50;}
 

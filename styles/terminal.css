@@ -1,0 +1,57 @@
+body {
+    font-family: 'Fira Code', monospace;
+    color: #ffffff; /* White text color */
+    margin-top: 1%; /* Space between terminal and top of the page */
+    padding: 0;
+    background-color: #222122; /* Black background for the page */
+    overflow: hidden; /* Prevents scrolling */
+    cursor: default; /* Prevents text selection */
+    -webkit-touch-callout: none; /* Prevents text selection */
+    -webkit-tap-highlight-color: transparent; /* Prevents text selection */
+}
+#terminal {
+    padding: 10px; /* Padding around the terminal */
+    overflow: auto; /* Enables scrolling if content overflows */
+    height: 100vh; /* Full height */
+    margin-top: 1%; /* Space between terminal and top of the page */
+}
+
+/* General Terminal Styles */
+#terminal-wrapper {
+    font-family: 'Courier New', Courier, monospace; /* Ensures terminal-like font */
+    color: #fff; /* White text color */
+    background-color: #222122; /* Black background for terminal */
+    padding: 20px; /* Padding around the terminal */
+}
+
+/* Output Styles */
+#output {
+    white-space: pre; /* Maintains formatting/spaces */
+    overflow-y: auto; /* Enables scrolling if content overflows */
+}
+
+/* Input Wrapper Styles */
+#input-wrapper {
+    display: flex; /* Aligns prefix and textarea inline */
+    margin-top: 10px; /* Space between output and input area */
+}
+
+#input-prefix {
+    white-space: nowrap; /* Prevents the prefix from wrapping */
+    margin-right: 5px; /* Spacing between prefix and input */
+    align-self: center; /* Vertically centers the prefix with the textarea */
+    color: #0f0; 
+}
+
+/* Textarea Styles */
+#input {
+    background-color: #222122; /* Matches terminal background */
+    color: #0f0; /* Terminal-like text color */
+    border: none; /* Removes border */
+    padding: 8px; /* Padding inside the textarea */
+    font-family: inherit; /* Ensures font consistency */
+    font-size: 1rem; /* Adjust size as needed */
+    outline: none; /* Removes the focus outline */
+    resize: none; /* Prevents resizing */
+}
+
