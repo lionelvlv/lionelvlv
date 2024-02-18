@@ -4,7 +4,6 @@ body {
     margin-top: 1%; /* Space between terminal and top of the page */
     padding: 0;
     background-color: #222122; /* Black background for the page */
-    overflow: hidden; /* Prevents scrolling */
     cursor: default; /* Prevents text selection */
     -webkit-touch-callout: none; /* Prevents text selection */
     -webkit-tap-highlight-color: transparent; /* Prevents text selection */
@@ -13,7 +12,7 @@ body {
     padding: 10px; /* Padding around the terminal */
     overflow: auto; /* Enables scrolling if content overflows */
     height: 100vh; /* Full height */
-    margin-top: 1%; /* Space between terminal and top of the page */
+    /* margin-top: 1%;  */
 }
 
 /* General Terminal Styles */
@@ -32,8 +31,8 @@ body {
 
 /* Input Wrapper Styles */
 #input-wrapper {
-    display: flex; /* Aligns prefix and textarea inline */
     margin-top: 10px; /* Space between output and input area */
+    display: none;
 }
 
 #input-prefix {
