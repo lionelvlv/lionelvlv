@@ -18,7 +18,7 @@ body {
 /* General Terminal Styles */
 #terminal-wrapper {
     font-family: 'Courier New', Courier, monospace; /* Ensures terminal-like font */
-    color: #fff; /* White text color */
+    color: #0f0; /* White text color */
     background-color: #222122; /* Black background for terminal */
     padding: 20px; /* Padding around the terminal */
 }
@@ -39,13 +39,13 @@ body {
     white-space: nowrap; /* Prevents the prefix from wrapping */
     margin-right: 5px; /* Spacing between prefix and input */
     align-self: center; /* Vertically centers the prefix with the textarea */
-    color: #0f0; 
+    color: #44CC44; 
 }
 
 /* Textarea Styles */
 #input {
     background-color: #222122; /* Matches terminal background */
-    color: #0f0; /* Terminal-like text color */
+    color: #44CC44; /* Terminal-like text color */
     border: none; /* Removes border */
     padding: 8px; /* Padding inside the textarea */
     font-family: inherit; /* Ensures font consistency */

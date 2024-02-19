@@ -8,13 +8,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const inputWrapper = document.getElementById('input-wrapper');
     const history = [];
     const colorPalette = [
-        { output: "#FFFFFF", input: "#E0E0E0" }, // White
-        { output: "#FF0000", input: "#CC0000" }, // Red
-        { output: "#00FF00", input: "#00CC00" }, // Green
-        { output: "#FFFF00", input: "#CCCC00" }, // Yellow
-        { output: "#0000FF", input: "#0000CC" }, // Blue
-        { output: "#4B0082", input: "#3A0065" }, // Purple
-        { output: "#9400D3", input: "#7600A8" }  // Dark Violet
+        { output: "#FFFFFF", input: "#D3D7CF" }, // White
+        { output: "#FF5555", input: "#CC4444" }, // Red
+        { output: "#55FF55", input: "#44CC44" }, // Green
+        { output: "#FFFF55", input: "#CCCC44" }, // Yellow
+        { output: "#5555FF", input: "#4444CC" }, // Blue
+        { output: "#FF55FF", input: "#CC44CC" }, // Pink
+        { output: "#55FFFF", input: "#44CCCC" }  // Cyan
     ];
 
     // Helper function to append text to the output, line by line
@@ -110,6 +110,9 @@ async function appendLink(url, linkText) {
     function processHelpCommand() {
         const helpLines = [
             "Available commands:",
+            "- resume: Open my resume in a new tab",
+            "- bio: Display a short bio about me",
+            "- socials: Display my social media links",
             "- help: Display this list of commands",
             "- clear: Clear the terminal screen",
             "- history: Display the command history",
@@ -119,10 +122,35 @@ async function appendLink(url, linkText) {
         animateLines(helpLines, () => {});
     }
 
-    function resume() {
+    function bio() {
+        const bioLines = [
+            "My name is Lionel and I'm a developer with a passion for game development and web design.",
+            "I grew up in the Bay Area and have always loved video games and technology.",
+            "I'm currently a student at UC Berkeley studying Computer Science.",
+            "I am proficient in Python and Java, and I'm familiar with HTML, CSS, and JavaScript.",
+            " ",
+            "On my free time, I watch anime, play video games, and work on personal projects.",
+            "I'm always looking for new opportunities to learn and grow as a developer.",
+        ]
+        animateLines(bioLines, () => {});
+        }
+    
+    function socials() {
+        const linkedIn = "https://www.linkedin.com/in/lionelv2003/";
+        const github = "https://github.com/lionelvlv";
+        const spotify = "https://open.spotify.com/user/31fvyt7ebxubyxkb3pmqcwgrt3qe";
+        animateTextLine("You can find me on the following platforms:", () => {});
+        appendLink(linkedIn, "LinkedIn");
+        appendLink(github, "GitHub");
+        appendLink(spotify, "Spotify");
+    }
+
+    async function resume() {
         const resumeUrl = "https://docs.google.com/document/d/1bImyCKyUUq8iKtp3EOvbM_VaLC2QK5-INj78YshLenI/edit";
-        const resumeText = "Click here to view my resume.";
-        appendLink(resumeUrl, resumeText);
+        const resumeText = "Opening resume...";
+        await animateLines([resumeText], () => {});
+        appendLink(resumeUrl, "Click here to view my resume");
+        window.open(resumeUrl, '_blank');
     }
     // Function to process and animate the "help" command output
     function clear() {
@@ -144,16 +172,61 @@ async function appendLink(url, linkText) {
     function color() {
         const listOfColors = [
             "color (0-6) - Change the color of the terminal",
-            "0 White | 1 Red | 2 Green | 3 Yellow | 4 Blue | 5 Purple | 6 Dark Violet",
+            "0 White | 1 Red | 2 Green | 3 Yellow | 4 Blue | 5 Pink | 6 Cyan",
         ];
         animateLines(listOfColors, () => {});
     }
-      
+
+    function calculateOperation(left, operator, right) {
+        switch (operator) {
+            case '+': return left + right;
+            case '-': return left - right;
+            case '*': return left * right;
+            case '/': return right === 0 ? NaN : left / right; // Check for division by zero
+            case '%': return left % right;
+            default: return NaN; // Return Not-a-Number if the operator is unknown
+        }
+    }
+    
+    function performArithmetic(command) {
+        const tokens = command.split(' ');
+        const stack = [];
+        
+        for (let i = 0; i < tokens.length; i++) {
+            const token = tokens[i];
+            if (!isNaN(parseFloat(token))) {
+                // If it's a number, push it to the stack
+                stack.push(parseFloat(token));
+            } else {
+                // If it's an operator, pop the last two numbers from the stack and apply the operation
+                if (stack.length < 2) {
+                    animateTextLine("Error: Invalid expression", () => {});
+                    return;
+                }
+                const right = stack.pop();
+                const left = stack.pop();
+                const result = calculateOperation(left, token, right);
+                
+                // Push the result back onto the stack
+                stack.push(result);
+            }
+        }
+    
+        if (stack.length !== 1) {
+            animateTextLine("Error: Invalid expression", () => {});
+            return;
+        }
+    
+        // The final result should be the only item left in the stack
+        animateTextLine(command + " = " + stack[0], () => {});
+    }
     
     // Function to handle command submission
     function submitCommand() {
         const command = inputElement.value.trim();
+        animateTextLine(" ", () => {});
         appendLine(command, true); // Display the command as a line in the output
+        animateTextLine(" ", () => {});
         inputElement.value = ''; // Clear the input area
         
         if (command.startsWith('color')) {
@@ -163,7 +236,10 @@ async function appendLink(url, linkText) {
             }
             const index = parseInt(command.split(' ')[1], 10);
             changeColor(index);
-        } else {
+        } else if (/^[\d+\-*/() ]+$/.test(command)) {
+            performArithmetic(command);
+        } 
+        else {
         switch (command.toLowerCase()) {
             case 'help':
                 processHelpCommand();
@@ -180,40 +256,11 @@ async function appendLink(url, linkText) {
             case 'resume':
                 resume();
                 break;
-            case 'color 0':
-                outputElement.style.color = "#FFFFFF";
-                inputElement.style.color = "#FFFFFF";
-                inputPrefix.style.color = "#FFFFFF";
+            case 'bio':
+                bio();
                 break;
-            case 'color 1':
-                outputElement.style.color = "#FF0000";
-                inputElement.style.color = "#FF0000";
-                inputPrefix.style.color = "#FF0000";
-                break;
-            case 'color 2':
-                outputElement.style.color = "#00FF00";
-                inputElement.style.color = "#00FF00";
-                inputPrefix.style.color = "#00FF00";
-                break;
-            case 'color 3':
-                outputElement.style.color = "#FFFF00";
-                inputElement.style.color = "#FFFF00";
-                inputPrefix.style.color = "#FFFF00";
-                break;
-            case 'color 4':
-                outputElement.style.color = "#0000FF";
-                inputElement.style.color = "#0000FF";
-                inputPrefix.style.color = "#0000FF";
-                break;
-            case 'color 5':
-                outputElement.style.color = "#4B0082";
-                inputElement.style.color = "#4B0082";
-                inputPrefix.style.color = "#4B0082";
-                break;
-            case 'color 6':
-                outputElement.style.color = "#9400D3";
-                inputElement.style.color = "#9400D3";
-                inputPrefix.style.color = "#9400D3";
+            case 'socials':
+                socials();
                 break;
             default:
                 animateTextLine("Unknown command: " + command, () => {});
