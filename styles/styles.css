@@ -16,22 +16,6 @@ header, footer, .socials, nav {
     text-align: center; /* Center align the text for these elements */
 }
 
-.header-name {
-    padding: 20px;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-#name::before {  
-    transform: scaleX(0);
-    transform-origin: bottom right;
-  }
-  
-#name:hover::before {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
-
 footer {
     padding: 20px;
     font-size: 14px;
@@ -132,10 +116,50 @@ footer a:hover {
     color: #4caf50; /* Change color on hover */
 }
 
-#header{
+.header{
     text-align: center;
     text-decoration: none;
-    color: #4caf50;}
+    color: #ffffff;
+}
+
+.header a{
+    text-decoration: underline;
+    color: #4caf50;
+}
+
+.header a:hover{
+    color: lightgreen;
+    text-decoration: none;
+}
+
+#name {
+    position: relative; 
+    padding: 10px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #4caf50;
+    transition: transform 0.3s ease;
+}
+
+#name:hover {
+    transform: scale(1.1);
+}
+
+.sidebar nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px; /* Position under the text */
+    left: 50%;
+    background-color: #4caf50; /* Color of the underline */
+    transition: width 0.3s ease, left 0.3s ease; /* Transition for the effect */
+}
+
+.sidebar nav a:hover::after {
+    width: 100%; /* Full width on hover */
+    left: 0; /* Align to the left */
+}
 
 /* Styling for the overall terminal */
 .terminal {
@@ -195,8 +219,8 @@ footer a:hover {
 }
 
 .terminal a {
-    text-decoration: none;
-    color: lightgreen; /* Grey for comments */
+    text-decoration: underline;
+    color: #4caf50; /* Grey for comments */
 }
 
 .terminal a:hover {
