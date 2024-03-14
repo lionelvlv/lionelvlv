@@ -60,8 +60,8 @@ nav {
 /* Projects Gallery */
 .projects-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around; /* Distributes space evenly */
+    flex-direction: column;
+    justify-content: center;
     gap: 20px; /* Space between projects */
 }
 #projects h2{
@@ -69,51 +69,125 @@ nav {
     text-align: center;
     color: #4caf50;
 }
+#header::after{
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #4caf50;
+    margin: 10px auto;
+}
+
+.project h3 {
+    color: #4caf50;
+}
 .project {
-    width: 50%; /* Adjust based on preference and screen size */
-    text-align: center;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    margin: 20px auto; /* Center the projects */
+    justify-content: center;
+    background-color: #363636; /* Darker background for contrast */
+    padding: 20px;
+    border-radius: 10px; /* Rounded edges for the projects */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adds depth to the projects */
+}
+.buttons {
+    display: flex;
+    justify-content: start;
+    gap: 10px; /* Adjust the space between buttons */
+}
+
+.buttons button {
+    background-color: #4caf50; /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove the default border */
+    padding: 10px 20px; /* Vertical and horizontal padding */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    font-size: 16px; /* Adjust font size as needed */
+    border-radius: 5px; /* Rounded corners */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Adds depth to the buttons */
+    display: flex; /* Change to flex to align items */
+    align-items: center; /* Align items vertically */
+}
+
+.buttons svg {
+    width: 20px; /* Adjust the width of the icon */
+    height: 20px; /* Adjust the height of the icon */
+    margin-left: 5px;
+}
+
+.buttons button:hover {
+    background-color: #45a049; /* Darker shade of green on hover */
+    transform: scale(1.05);
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
 }
 
 .project img {
-    width: 100%; /* Continue to take full width of its container */
-    height: 200px; /* Fixed height for all images */
-    object-fit: cover; /* Cover the area, might crop the image */
-    border-radius: 10px; /* Keeps rounded edges */
-    margin-bottom: 0px; /* Space between the image and the text */
-    transition: transform 0.3s ease; /* Smooth transition for transform changes */
+    width: 500px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
-.project img:hover {
-    opacity: 0.8; /* Slightly transparent on hover */
-    transform: scale(1.05) ; /* Slightly bigger on hover */
+.project-screenshot {
+    padding: 20px;
 }
 
 .project h3 a {
-    color: #ffffff; /* Initial color */
-    text-decoration: none; /* Removes underline */
-    display: block; /* Makes the link fill the container for easier clicking */
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
 }
 
 .project h3 a:hover {
-    color: #4caf50; /* Change color on hover */
+    color: #4caf50;
 }
 
 .project-languages {
-    margin-bottom: 10px; /* Spacing between this text and the project description */
+    margin-bottom: 10px;
 }
 
 .project-languages span {
-    background-color: #555; /* Dark background for the chips */
-    color: #fff; /* White text color */
-    border-radius: 4px; /* Rounded edges for the chips */
-    padding: 2px 8px; /* Padding inside the chips */
-    margin: 0 4px; /* Margin between chips */
-    display: inline-block; /* Display as inline-block for proper alignment */
-    font-size: 0.8em; /* Smaller font size for the chips */
+    background-color: #555;
+    color: #fff;
+    border-radius: 4px;
+    padding: 2px 8px;
+    margin: 0 4px;
+    display: inline-block;
+    font-size: 0.8em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .project {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .project img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+footer a {
+    text-decoration: none; /* Removes underline */
+    color: #4caf50; /* Initial color */
 }
 
 footer a:hover {
-    color: #4caf50; /* Change color on hover */
+    color: lightgreen; /* Change color on hover */
+    opacity: 0.8; /* Slightly transparent on hover */
 }
 
 .header{
@@ -123,7 +197,7 @@ footer a:hover {
 }
 
 .header a{
-    text-decoration: underline;
+    text-decoration: none;
     color: #4caf50;
 }
 
@@ -131,11 +205,8 @@ footer a:hover {
     color: lightgreen;
     text-decoration: none;
 }
-
 #name {
-    position: relative; 
-    padding: 10px;
-    font-size: 32px;
+    /* font-size: 32px; */
     font-weight: bold;
     color: #4caf50;
     transition: transform 0.3s ease;
@@ -219,7 +290,7 @@ footer a:hover {
 }
 
 .terminal a {
-    text-decoration: underline;
+    text-decoration: none;
     color: #4caf50; /* Grey for comments */
 }
 
@@ -239,6 +310,9 @@ ul {
 /* Styling Sidebar */
 .sidebar {
     display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 5px;
     align-items: center;
     background-color: #2d2d2d; /* Slightly lighter than body for contrast */
     padding: 10px 20px; /* Adjust based on your layout */

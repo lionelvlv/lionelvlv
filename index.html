@@ -34,7 +34,7 @@
                 </nav>
             </div>
             <div class="header">
-                <h1 id="name"> <b>Hi I'm Lionel. (´◡`)</b> </h1>
+                <h1 id="name"> Hi I'm Lionel. (´◡`) </h1>
                 <p>I'm an aspiring developer studying Computer Science at UC Berkeley.</p>
                 <p>This semester, I'm taking <a href="https://www.eecs70.org/">Discrete Mathmatics and Probability and Statistics.</a></p>
                 <p>I hope you like my stuff.</p>
@@ -64,44 +64,100 @@
         
         
         <section id="projects">
-            <h2>Projects</h2>
+            <h2 id="header">Projects</h2>
             <div class="projects-container">
                 <!-- Project 1: Build Your Own World -->
                 <div class="project">
-                    <a href="https://youtu.be/LYvN_5UWJVY">
+                    <div class="project-screenshot">
                         <img src="assets/projects/boyw.png" alt="Build Your Own World Project Screenshot">
-                    </a>
-                    <h3><a href="https://youtu.be/LYvN_5UWJVY">Build Your Own World Project (2023)</a></h3>
-                    <p class="project-languages"> <span>[Java]</span> <span>[A* Pathfinding]</span> <span>[Map Generation]</span></p>
-                    <p>Made a game in Java, implementing the A* pathfinding algorithm, map generation, and more. Code available upon request.</p>
+                    </div>
+                    <div class="project-info">
+                        <h3>Build Your Own World Project (2023)</h3>
+                        <p class="project-languages"> <span>[Java]</span> <span>[A* Pathfinding]</span> <span>[Map Generation]</span></p>
+                        <p>Made a game in Java, implementing the A* pathfinding algorithm, map generation, and more. Code available upon request.</p>
+                        <div class="buttons">
+                            <button type="button" onclick="window.open('https://youtu.be/LYvN_5UWJVY', '_blank')">
+                                Demo
+                                <svg aria-hidden="true" class="svg-inline--fa fa-external-link-alt fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                    <path fill="white" d="M576 24v127.984c0 21.461-25.96 31.98-40.971 16.971l-35.707-35.709-243.523 243.523c-9.373 9.373-24.568 9.373-33.941 0l-22.627-22.627c-9.373-9.373-9.373-24.569 0-33.941L442.756 76.676l-35.703-35.705C391.982 25.9 402.656 0 424.024 0H552c13.255 0 24 10.745 24 24zM407.029 270.794l-16 16A23.999 23.999 0 0 0 384 303.765V448H64V128h264a24.003 24.003 0 0 0 16.97-7.029l16-16C376.089 89.851 365.381 64 344 64H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V287.764c0-21.382-25.852-32.09-40.971-16.97z"></path>
+                                </svg>
+                            </button>
+                            
+                            <button type="button" onclick="window.open('https://github.com/Berkeley-CS61B-Student/fa23-proj3-g93', '_blank')">
+                                View Source 
+                                <svg aria-hidden="true" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                                    <path fill="white" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path>
+                                  </svg>   
+                            </button>
+                        </div>
+                    </div>
                 </div>
-        
+
                 <!-- Project 2: Lethal Company Fast Climbing Mod -->
                 <div class="project">
-                    <a href="https://thunderstore.io/c/lethal-company/p/lv/FastClimbMod/">
+                    <div class="project-screenshot">
                         <img src="assets/projects/lethal.png" alt="Lethal Company Fast Climbing Mod Screenshot">
-                    </a>
-                    <p class="project-languages"><span>[C#]</span> <span>[Game Patch]</span></p>
-                    <h3><a href="https://thunderstore.io/c/lethal-company/p/lv/FastClimbMod/">Lethal Company Mod (2023)</a></h3>
-                    <p>Modified existing codebase and created patches that improve player mobility by 150%.</p>
+                    </div>
+                    <div class="project-info">
+                        <h3>Lethal Company Mod (2023)</h3>
+                        <p class="project-languages"><span>[C#]</span> <span>[Game Patch]</span></p>
+                        <p>Modified existing codebase and created patches that improve player mobility by 150%.</p>
+                        <div class="buttons">
+                            <button type="button" onclick="window.open('https://thunderstore.io/c/lethal-company/p/lv/FastClimbMod/', '_blank')">
+                                Demo
+                                <svg aria-hidden="true" class="svg-inline--fa fa-external-link-alt fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                    <path fill="white" d="M576 24v127.984c0 21.461-25.96 31.98-40.971 16.971l-35.707-35.709-243.523 243.523c-9.373 9.373-24.568 9.373-33.941 0l-22.627-22.627c-9.373-9.373-9.373-24.569 0-33.941L442.756 76.676l-35.703-35.705C391.982 25.9 402.656 0 424.024 0H552c13.255 0 24 10.745 24 24zM407.029 270.794l-16 16A23.999 23.999 0 0 0 384 303.765V448H64V128h264a24.003 24.003 0 0 0 16.97-7.029l16-16C376.089 89.851 365.381 64 344 64H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V287.764c0-21.382-25.852-32.09-40.971-16.97z"></path>
+                                </svg>
+                            </button>
+                            <button type="button" onclick="window.open('https://github.com/lionelvlv/lcfastclimbing', '_blank')">
+                                View Source 
+                                <svg aria-hidden="true" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                                    <path fill="white" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path>
+                                  </svg>   
+                            </button>
+                        </div>
+                    </div>
                 </div>
-        
+                
                 <!-- Project 3: NGordnet -->
                 <div class="project">
+                    <div class="project-screenshot">
                         <img src="assets/projects/ngrodnet.png" alt="NGordnet Screenshot">
-                    <h3>NGordnet (2023)</h3>
-                    <p class="project-languages"><span>[Java]</span> <span>[Data Visualization]</span></p>
-                    <p>Engineered a Java-based web tool for processing large datasets from WordNet and Google Ngram handling expansive data volumes efficiently. Code available upon request.</p>
+                    </div>
+                    <div class="project-info">
+                        <h3>NGordnet (2023)</h3>
+                        <p class="project-languages"><span>[Java]</span> <span>[Data Visualization]</span></p>
+                        <p>Engineered a Java-based web tool for processing large datasets from WordNet and Google Ngram handling expansive data volumes efficiently. Code available upon request.</p>
+                        <div class="buttons">
+                            <button type="button" onclick="window.open('https://github.com/Berkeley-CS61B-Student/fa23-s94/tree/main/proj2a', '_blank')">
+                                View Source 
+                                <svg aria-hidden="true" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                                    <path fill="white" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path>
+                                  </svg>   
+                            </button>
+                        </div>
+                    </div>
                 </div>
+
 
                 <!-- Project 4: Pigmental -->
                 <div class="project">
-                    <a href="https://fylthy-cazual.itch.io/pigmental-v0">
+                    <div class="project-screenshot">
                         <img src="assets/projects/pigmental.png" alt="Pigmental">
-                    </a>
-                    <h3><a href="https://fylthy-cazual.itch.io/pigmental-v0">Pigmental (2022)</a></h3>
-                    <p class="project-languages"><span>[C#]</span> <span>[Game Dev]</span> <span>[Unity]</span> <span>[UI Design]</span></p>
-                    <p>Made a game in Unity in Berkeley's Game Design and Development Club.</p>
+                    </div>
+                    <div class="project-info">
+                        <h3><a href="">Pigmental (2022)</a></h3>
+                        <p class="project-languages"><span>[C#]</span> <span>[Game Dev]</span> <span>[Unity]</span> <span>[UI Design]</span></p>
+                        <p>Developed an 2D elemental shooter game using Unity as part of the Game Design and Development program at Berkeley in a single semester.</p>
+                        <div class="buttons">
+                            <button type="button" onclick="window.open('https://fylthy-cazual.itch.io/pigmental-v0', '_blank')">
+                                Demo
+                                <svg aria-hidden="true" class="svg-inline--fa fa-external-link-alt fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                    <path fill="white" d="M576 24v127.984c0 21.461-25.96 31.98-40.971 16.971l-35.707-35.709-243.523 243.523c-9.373 9.373-24.568 9.373-33.941 0l-22.627-22.627c-9.373-9.373-9.373-24.569 0-33.941L442.756 76.676l-35.703-35.705C391.982 25.9 402.656 0 424.024 0H552c13.255 0 24 10.745 24 24zM407.029 270.794l-16 16A23.999 23.999 0 0 0 384 303.765V448H64V128h264a24.003 24.003 0 0 0 16.97-7.029l16-16C376.089 89.851 365.381 64 344 64H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V287.764c0-21.382-25.852-32.09-40.971-16.97z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -131,7 +187,9 @@
                 <a href="https://github.com/lionelvlv" target="_blank">
                     <img src="assets/logo/github.png" alt="GitHub Logo"> GitHub </a>
                 <a href="https://www.linkedin.com/in/lionelv2003/" target="_blank">
-                    <img src="assets/logo/linkedin.png" alt="LinkedIn Logo"> LinkedIn </a>            </div>
+                    <img src="assets/logo/linkedin.png" alt="LinkedIn Logo"> LinkedIn </a>            
+            </div>
+            <p>Website last updated 3/14/2024</p>
         </footer>
     </div>
     <script src="scripts/script.js"></script>
