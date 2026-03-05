@@ -1,15 +1,17 @@
 body {
 	display: flexbox;
 	background-color: lightblue;
-	width: max(20%, 350px);
+	width: max(30%, 450px);
 	align-items: center;
 	text-align: center;
 	margin: auto;
+	background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Bliss_location%2C_Sonoma_Valley_in_2006.jpg/1280px-Bliss_location%2C_Sonoma_Valley_in_2006.jpg");
 	font-family: 'MS PGothic', sans-serif;
+	background-size: cover;
 }
 img {
-	width: 100%;
-	height: 100%;
+	width: 50%;
+	height: 50%;
 }
 h1 {
 	font-size:300%;
@@ -23,11 +25,17 @@ div {
 	border: 1px solid black;
 	text-align: left;
 	padding: 20%;
+	background-color: lightblue;
 }
 
 .hero {
+	background-color: lightblue;
 	border: 1px solid black;
 }
 
-
+footer {
+	margin-top: 20px;
+	background-color: lightblue;
+	border: 1px solid black;
+}
 
