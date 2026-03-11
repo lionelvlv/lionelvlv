@@ -46,7 +46,6 @@ img {
 }
 
 footer {
-	width: max(30%, 700px);
 	margin: 20px 20px auto auto;
 	background-color: lightblue;
 	border: 1px solid black;
