@@ -1,7 +1,6 @@
 body {
-	display: flexbox;
 	background-color: lightblue;
-	width: max(30%, 450px);
+	width: max(30%, 700px);
 	align-items: center;
 	text-align: center;
 	margin: auto;
@@ -9,33 +8,81 @@ body {
 	font-family: 'MS PGothic', sans-serif;
 	background-size: cover;
 }
+
+/*
+Source - https://stackoverflow.com/a/13184693
+Posted by Peter, modified by community. See post 'Timeline' for change history
+Retrieved 2026-03-11, License - CC BY-SA 4.0
+*/
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
 img {
-	width: 50%;
-	height: 50%;
-}
-h1 {
-	font-size:300%;
-}
-
-div {
-	margin-top: 20px;
-}
-
-.nav {
 	border: 1px solid black;
-	text-align: left;
-	padding: 20%;
-	background-color: lightblue;
 }
 
-.hero {
+.container .sitemap{
 	background-color: lightblue;
 	border: 1px solid black;
+	padding: 1%;
+	margin: 20px 20px auto auto;
+}
+
+.container .hero{
+	background-color: lightblue;
+	border: 1px solid black;
+	padding: 1%;
+	margin: 20px 20px auto auto;
+}
+
+.container .updates {
+	border: 1px solid black;
+	background-color: lightblue;
+	padding: 1%;
+	margin: 20px 20px auto auto;
 }
 
 footer {
-	margin-top: 20px;
+	width: max(30%, 700px);
+	margin: 20px 20px auto auto;
 	background-color: lightblue;
 	border: 1px solid black;
 }
 
+.container {
+	margin: auto 0;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Source: https://ribo.zone/free/snippets/ */
+.imgtxt {
+  width: fit-content;
+  height: fit-content;
+  display: inline-block;
+  position: relative;
+}
+.imgtxt span {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  font-size: 2.5rem;
+  color: #FFF;
+  filter: drop-shadow(1px 1px 0 black) 
+    drop-shadow(-1px 1px 0 black)
+    drop-shadow(1px -1px 0 black)
+    drop-shadow(-1px -1px 0 black);
+}
+.imgtxt:hover span, .imgtxt:focus span {
+  opacity: 1;
+}
+.imgtxt:hover img, .imgtxt:focus img {
+  /* add hover effects like transform or filter to your images here! */
+}
+	
