@@ -76,6 +76,16 @@ a {
   font-style: obilique;
 }
 
+.contact sub-header{
+  text-align: left
+}
+.contact p {
+  text-align: left
+}
+
+.contact li {
+  text-align: left
+}
 .misc-info ul {
   flex-direction: row;
 }
