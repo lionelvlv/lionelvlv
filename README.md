@@ -6,7 +6,7 @@ CS student at UC Berkeley. I build real-time web apps, game mods and graphics to
 
 | Project | What it is | Highlights |
 |---|---|---|
-| [RetroChord](https://github.com/lionelvlv/discord-mockup) | Real-time chat with voice, video and screen share | React + TypeScript + Firebase; P2P WebRTC mesh using the Perfect Negotiation pattern; Vitest + CI |
+| [RetroChord](https://github.com/lionelvlv/retrochord) | Real-time chat with voice, video and screen share | React + TypeScript + Firebase; P2P WebRTC mesh using the Perfect Negotiation pattern; Vitest + CI |
 | [Chess Arcade](https://github.com/lionelvlv/3d-chess) | 3D chess with online multiplayer | Hand-written rules engine verified with perft tests; Stockfish in a Web Worker; Three.js; PeerJS |
 | [Splat Painter](https://github.com/lionelvlv/cs184splatpainter) | Painting tools for 3D Gaussian splat scenes | CS 184 team project extending Nerfstudio's Viser; I built the brush selection and image-to-splat color mapping |
 
